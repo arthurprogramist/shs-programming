@@ -9,6 +9,8 @@ def checkpassword(password):
         return False
     if not any(i.isupper() for i in password):
         return False
+    if not any(i.islower() for i in password):
+        return False
     return True
 if checkpassword(passw):
     print("надеждный пароль")
